@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
         tv.delegate = self
         return tv
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
 
 //MARK: Delegate
 extension ProfileViewController: UITableViewDelegate {
-    
+  
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -46,11 +46,11 @@ extension ProfileViewController: UITableViewDelegate {
             return Helpers.postsArray[0].count
         }
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             return ProfileHeaderView()
-        }else {
+        } else {
             return nil
         }
     }
@@ -106,20 +106,13 @@ extension ProfileViewController {
         postView.backgroundColor = .lightGray
     }
     
-    func setConstraints () {
-//        let constraints = [
-//            postView.topAnchor.constraint(equalTo: view.topAnchor),
-//            postView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            postView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            postView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//        ]
-//        NSLayoutConstraint.activate(constraints)
-//    }
-    postView.snp.makeConstraints { make in
-        make.centerX.centerY.width.height.equalToSuperview()
+    func setConstraints() {
+        postView.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalToSuperview()
+        }
+    }
 }
-}
-}
+
 //Mark: Push method
 extension ProfileViewController {
     
@@ -128,4 +121,3 @@ extension ProfileViewController {
     }
 }
 
-//
