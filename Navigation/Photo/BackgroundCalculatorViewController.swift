@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 
+// Добавил третью кнопку в tabBarController - нажимаем кнопку - запускается код, начинающий отсчет при выходе в background
 class BackgroundCalculatorViewController: UIViewController {
     
 //MARK:- Properties
